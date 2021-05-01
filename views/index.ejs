@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Chuck Noriis Jokes</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  <body class="container">
+    <h1 class="jumbotron text-center">
+      <img src="https://assets.chucknorris.host/img/avatar/chuck-norris.png" />
+      Chuck Noriis Jokes
+    </h1>
+    <div class="row">
+      <form action="/" method="GET">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <!-- categories.forEach(function(catg)){
+                <input type="radio" id="" name="catg" value="catg" />
+              <label for="catg">catg</label><br />
+              } -->
+            <div class="input-group-text">
+              <input type="radio" id="dev" name="category" value="dev" />
+              <label for="dev">dev</label><br />
+              <input type="radio" id="food" name="category" value="food" />
+              <label for="food">food</label><br />
+            </div>
+          </div>
+          <div class="">
+            <button class="btn btn-success" type="submit">
+              Get Chuck Norris Joke
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <br />
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center"><%= joke %></div>
+      </div>
+    </div>
   </body>
 </html>
